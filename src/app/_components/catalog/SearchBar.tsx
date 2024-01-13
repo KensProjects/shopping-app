@@ -4,8 +4,11 @@ import { type FormEvent, useState } from "react"
 import catalogData from "../../catalogData.json"
 import Link from "next/link"
 import Image from "next/image"
+import { useSession } from "next-auth/react"
 
 export default function SearchBar() {
+
+    const { data: session } = useSession()
 
     const [searchTerm, setSearchTerm] = useState("")
     const router = useRouter()
@@ -25,6 +28,8 @@ export default function SearchBar() {
     function clearSearchTerm() {
         setSearchTerm("")
     }
+
+    if (!session) return null
 
     return (
         <div className="flex flex-col justify-center items-center w-fit">
