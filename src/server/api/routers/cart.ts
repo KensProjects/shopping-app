@@ -30,7 +30,7 @@ export const cartRouter = createTRPCRouter({
       })
     }),
   decreaseCartItemQuantity: protectedProcedure
-    .input(z.object({ name: z.string(), quantity: z.number() }))
+    .input(z.object({ name: z.string(), quantity: z.number().optional() }))
     .mutation(async ({ ctx, input }) => {
 
       const itemQuantityAtOne = (input.quantity === 1)
