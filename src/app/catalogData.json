@@ -1,0 +1,24 @@
+[
+  { "name": "apple", "price": 0.6, "imageSrc": "/apple.svg" },
+  { "name": "banana", "price": 0.3, "imageSrc": "/banana.svg" },
+  { "name": "steak", "price": 15.0, "imageSrc": "/steak.svg" },
+  {
+    "name": "AA batteries",
+    "price": 4.0,
+    "imageSrc": "/batteries.svg"
+  },
+  { "name": "milk", "price": 3.5, "imageSrc": "/milk.svg" },
+  { "name": "olive oil", "price": 8.0, "imageSrc": "/olive-oil.svg" },
+  {
+    "name": "toilet paper",
+    "price": 6.0,
+    "imageSrc": "/toilet-paper.svg"
+  },
+  { "name": "shoes", "price": 50.0, "imageSrc": "/shoes.svg" },
+  { "name": "printer", "price": 60.0, "imageSrc": "/printer.svg" },
+  {
+    "name": "journal",
+    "price": 5.0,
+    "imageSrc": "/journal.svg"
+  }
+]
