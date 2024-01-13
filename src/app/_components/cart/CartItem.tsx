@@ -11,7 +11,7 @@ export default function CartItem({ name, price, imageSrc, quantity }: Catalog) {
 
     const { deleteCartItem, replaceSpaces, fixPrice } = useCart()
 
-    const totalPrice = price * quantity!
+    const totalPrice = price * quantity
 
     const cartItemName = replaceSpaces(name)
     const cartItemPrice = fixPrice(totalPrice)
