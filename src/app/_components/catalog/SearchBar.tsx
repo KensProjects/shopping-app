@@ -13,7 +13,7 @@ export default function SearchBar() {
 
     function handleSearchCatalog(e: FormEvent) {
         e.preventDefault()
-        router.push(`http://localhost:3000/catalog?q=${searchTerm}`)
+        router.push(`${process.env.NEXTAUTH_URL}/catalog?q=${searchTerm}`)
     }
 
     const searchSuggestions = catalogData.filter(({ name }) => (
@@ -39,7 +39,7 @@ export default function SearchBar() {
                 <ul className="absolute justify-center top-24 items-center text-black flex flex-col w-full">
                     {searchSuggestions.map(({ name }) => (
                         <li key={name} className="hover:bg-gray-200 bg-white w-52 flex justify-center items-center border-black border z-40">
-                            <Link href={`http://localhost:3000/catalog?q=${name}`} onClick={() => clearSearchTerm()}>{name}
+                            <Link href={`${process.env.NEXTAUTH_URL}/catalog?q=${name}`} onClick={() => clearSearchTerm()}>{name}
                             </Link>
                         </li>
                     ))}
