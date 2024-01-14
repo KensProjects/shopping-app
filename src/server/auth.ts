@@ -53,23 +53,23 @@ export const authOptions: NextAuthOptions = {
      * @see https://next-auth.js.org/providers/github
      */
   ],
-  callbacks: {
-    jwt({ token, user }) {
-      if (user) {
-        return {
-          ...token, id: user.id
-        }
-      }
-      return token
-    },
-    session({ session, token }) {
-      return {
-        ...session, user: {
-          ...session.user, id: token.id
-        }
-      }
-    },
-  },
+  // callbacks: {
+  //   jwt({ token, user }) {
+  //     if (user) {
+  //       return {
+  //         ...token, id: user.id
+  //       }
+  //     }
+  //     return token
+  //   },
+  //   session({ session, token }) {
+  //     return {
+  //       ...session, user: {
+  //         ...session.user, id: token.id
+  //       }
+  //     }
+  //   },
+  // },
   session: {
     strategy: "jwt",
   },
