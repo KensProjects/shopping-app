@@ -31,7 +31,6 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <meta name="google-site-verification" content="uNZvMUmnYCPzJjHG7xNn8dxqSwhBs12hlIVsDocL_XM" />
       <body className={`font-sans ${inter.variable}`}>
         <TRPCReactProvider cookies={cookies().toString()}>
           <NextAuthProvider session={session}>
