@@ -7,7 +7,7 @@ export async function middleware(req: NextRequest) {
         return req.nextUrl.pathname.startsWith(path)
     }
 
-    const activeSession = await getToken({ req: req, secret: process.env.SECRET })
+    const activeSession = await getToken({ req: req, secret: process.env.NEXTAUTH_SECRET })
 
     const catalogRoute = setPath("/catalog")
     const itemRoute = setPath("/catalog/:item")
