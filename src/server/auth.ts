@@ -49,7 +49,6 @@ export const authOptions: NextAuthOptions = {
         }
       }
     }),
-
     /**
      * ...add more providers here.
      *
@@ -77,6 +76,7 @@ export const authOptions: NextAuthOptions = {
       }
     },
   },
+  secret: env.NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
   },
