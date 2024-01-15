@@ -17,7 +17,7 @@ export default function SearchBar() {
 
     function handleSearchCatalog(e: FormEvent) {
         e.preventDefault()
-        router.push(`${process.env.NEXTAUTH_URL}/catalog?q=${searchTerm}`)
+        router.push(`${env.NEXTAUTH_URL}/catalog?q=${searchTerm}`)
     }
 
     const searchSuggestions = catalogData.filter(({ name }) => (

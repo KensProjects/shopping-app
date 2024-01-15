@@ -1,5 +1,6 @@
 import { getToken } from "next-auth/jwt";
 import  { type NextRequest, NextResponse } from "next/server";
+import { env } from "~/env.mjs";
 
 export async function middleware(req: NextRequest) {
 
@@ -7,7 +8,7 @@ export async function middleware(req: NextRequest) {
         return req.nextUrl.pathname.startsWith(path)
     }
 
-    const activeSession = await getToken({ req: req, secret: process.env.NEXTAUTH_SECRET })
+    const activeSession = await getToken({ req: req, secret: env.NEXTAUTH_SECRET })
 
     const catalogRoute = setPath("/catalog")
     const itemRoute = setPath("/catalog/:item")
