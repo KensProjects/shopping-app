@@ -5,7 +5,7 @@ import catalogData from "../../catalogData.json"
 import Link from "next/link"
 import Image from "next/image"
 import { useSession } from "next-auth/react"
-import { env } from "~/env.mjs"
+import { env } from "~/env.js"
 
 export default function SearchBar() {
 
