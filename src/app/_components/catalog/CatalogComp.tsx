@@ -17,7 +17,7 @@ export default function CatalogComp() {
 
     useEffect(() => {
         setCatalog(filteredCatalog)
-    }, [])
+    }, [searchQuery])
 
     return (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4 p-4 w-full h-full">

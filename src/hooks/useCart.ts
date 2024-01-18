@@ -47,7 +47,7 @@ export default function useCart() {
     )
     const { mutate: decreaseQuantity } = api.cart.decreaseCartItemQuantity.useMutation({
         onSuccess: () => {
-            refreshCartItems('Item quantity decreased!');
+            refreshCartItems("Item removed from cart!");
         }
     })
 

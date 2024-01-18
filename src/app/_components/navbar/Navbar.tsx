@@ -4,13 +4,14 @@ import CartIcon from "./CartIcon";
 import SearchBar from "../catalog/SearchBar";
 import Hamburger from "./Hamburger";
 import Link from "next/link";
+import SignInButton from "./SignInButton";
 
 export default async function Navbar() {
 
   const session = await getServerAuthSession()
 
   return (
-    <nav className="w-full h-24 flex justify-between sm:justify-between items-center bg-blue-600 mb-8 text-white px-4 ">
+    <nav className="w-full h-24 flex justify-center sm:justify-between items-center bg-blue-600 mb-8 text-white sm:px-8 ">
       <Hamburger />
       <Link href="/" className="text-xl hidden sm:flex">Shopping App</Link>
 
@@ -24,7 +25,7 @@ export default async function Navbar() {
             <UserIcon />
           </>
           :
-          <Link href={'/api/auth/signin'}>Signin</Link>}
+          <SignInButton />}
       </div>
 
     </nav>

@@ -9,6 +9,7 @@ import NextAuthProvider from "./_components/SessionProvider";
 import { getServerAuthSession } from "~/server/auth";
 import { Toaster } from "react-hot-toast";
 import NavbarToggle from "./_components/navbar/NavbarToggle";
+import { Provider } from "jotai";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,13 +34,15 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`font-sans ${inter.variable}`}>
         <TRPCReactProvider cookies={cookies().toString()}>
+          <Provider>
           <NextAuthProvider session={session}>
             <Navbar />
             <NavbarToggle />
-
             <Toaster position="bottom-right" />
             {children}
           </NextAuthProvider>
+          </Provider>
+
         </TRPCReactProvider>
       </body>
     </html>

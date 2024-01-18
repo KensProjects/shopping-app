@@ -69,6 +69,9 @@ export const cartRouter = createTRPCRouter({
 
     return ctx.db.cartItem.findMany({
       where: { createdById: ctx.session.user.id },
+      orderBy:{
+        name:'asc'
+      }
     });
   }),
 })
